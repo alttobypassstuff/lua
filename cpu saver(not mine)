@@ -70,8 +70,7 @@ w.DescendantAdded:Connect(function(v)
         v[v.ClassName.."Template"]=0
     end
 end)
-wait(3)
-game:GetService("RunService"):Set3dRenderingEnabled(false)
+
 local baseplate = Instance.new("Part")
 baseplate.Size = Vector3.new(10000000, 1, 10000000) 
 baseplate.Position = Vector3.new(0, 0, 0)
