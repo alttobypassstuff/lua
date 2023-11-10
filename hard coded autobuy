@@ -1,30 +1,32 @@
 local item = '[LMG] - $3863'
 local itemAmmo = '200 [LMG Ammo] - $309'
-local revolverBought = false
 local plr = game.Players.LocalPlayer
 
-if (plr.Backpack:FindFirstChild(item) == nil) and (plr.Character:FindFirstChild(item) == nil) then
+local function buyItem(itemName)
+    local bought = false
     repeat
-        local RevolverBuy = workspace.Ignored.Shop[item]
-        plr.Character.HumanoidRootPart.CFrame = RevolverBuy.Head.CFrame + Vector3.new(0, 3.2, 0)
-        wait(0.2)
-        fireclickdetector(RevolverBuy.ClickDetector)
-        revolverBought = (plr.Backpack:FindFirstChild(item) or plr.Character:FindFirstChild(item)) and true or false
+        local itemToBuy = workspace.Ignored.Shop[itemName]
+        if itemToBuy then
+            plr.Character.HumanoidRootPart.CFrame = itemToBuy.Head.CFrame + Vector3.new(0, 3.2, 0)
+            wait(0.2)
+            fireclickdetector(itemToBuy.ClickDetector)
+            bought = (plr.Backpack:FindFirstChild(itemName) or plr.Character:FindFirstChild(itemName)) and true or false
+        else
+            warn("Item not found:", itemName)
+        end
         wait()
-    until revolverBought
+    until bought
 end
 
-if revolverBought then
-    wait(1)
-    if (plr.Backpack:FindFirstChild(itemAmmo) == nil) and (plr.Character:FindFirstChild(itemAmmo) == nil) then 
-        local a = 1
-        repeat 
-            local RevolverAmmoBuy = workspace.Ignored.Shop[itemAmmo]
-            plr.Character.HumanoidRootPart.CFrame = RevolverAmmoBuy.Head.CFrame + Vector3.new(0, 3.2, 0)
-            wait(0.2)
-            fireclickdetector(RevolverAmmoBuy.ClickDetector)
-            a = a + 1
-            wait()
-        until (plr.Backpack:FindFirstChild(itemAmmo) or plr.Character:FindFirstChild(itemAmmo) or (a == 130))
-    end
+buyItem(item)
+
+wait(1) -- optional delay, adjust as needed
+
+if (plr.Backpack:FindFirstChild(itemAmmo) == nil) and (plr.Character:FindFirstChild(itemAmmo) == nil) then 
+    local a = 1
+    repeat 
+        buyItem(itemAmmo)
+        a = a + 1
+        wait()
+    until (plr.Backpack:FindFirstChild(itemAmmo) or plr.Character:FindFirstChild(itemAmmo) or (a == 130))
 end
