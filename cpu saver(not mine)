@@ -70,12 +70,4 @@ w.DescendantAdded:Connect(function(v)
         v[v.ClassName.."Template"]=0
     end
 end)
-
-local baseplate = Instance.new("Part")
-baseplate.Size = Vector3.new(10000000, 1, 10000000) 
-baseplate.Position = Vector3.new(0, 0, 0)
-baseplate.BrickColor = BrickColor.new("Bright red")
-baseplate.Anchored = true
-baseplate.Parent = game.Workspace
-wait(3)
-game.Workspace:FindFirstChild("MAP"):Destroy()
+game:GetService("RunService"):Set3dRenderingEnabled(false)
