@@ -5,7 +5,7 @@ repeat
         plr.Character.HumanoidRootPart.CFrame = RevolverBuy.Head.CFrame + Vector3.new(0, 3.2, 0)
         task.wait(0.2)
         fireclickdetector(RevolverBuy.ClickDetector)
-        revolverBought = (plr.Backpack:FindFirstChild(item) or plr.Character:FindFirstChild(item)) or (Shutdown == true) and true or false
+        revolverBought = true
 until revolverBought
 if revolverBought then
     task.wait(1)
@@ -16,7 +16,7 @@ if revolverBought then
         task.wait(0.2)
         fireclickdetector(RevolverAmmoBuy.ClickDetector)
         a = a + 1
-    until (plr.Backpack:FindFirstChild(itemAmmo)) or (plr.Character:FindFirstChild(itemAmmo)) or (a == 130) or (Shutdown == true)
+    until a == 130
 end
 end
 end
