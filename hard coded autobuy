@@ -1,11 +1,11 @@
 local a, item, itemAmmo, revolverBought, plr = 1, 'LMG] - $3863', '200 [LMG Ammo] - $309', false, game.Players.LocalPlayer
 if (plr.Backpack:FindFirstChild(item) == nil) and (plr.Character:FindFirstChild(item) == nil) then
 repeat
-        local RevolverBuy = workspace.Ignored.Shop[item]
+        local RevolverBuy = workspace.Ignored.Shop[tostring(item)]
         plr.Character.HumanoidRootPart.CFrame = RevolverBuy.Head.CFrame + Vector3.new(0, 3.2, 0)
         task.wait(0.2)
         fireclickdetector(RevolverBuy.ClickDetector)
-        revolverBought = (plr.Backpack:FindFirstChild(item) or plr.Character:FindFirstChild(item)) and true or false
+        revolverBought = (plr.Backpack:FindFirstChild(item) or plr.Character:FindFirstChild[tostring(item)]) and true or false
 until revolverBought
 if revolverBought then
     task.wait(1)
