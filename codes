@@ -1,0 +1,23 @@
+local Codes = {
+    "HALLOWEEN2023",
+    "BIKE",
+    "DAUP", 
+    "LABORDAY2023",
+    "MOTORCYCLE",
+    "DHT100K",
+    "MELONBEAR",
+    "SCHOOL2023",
+    "DHSUPRISE!",
+    "#FREED",
+    "CAR",
+    "MOPED",
+    "STAYSOLIDROCKY"
+}
+
+local remote = game.ReplicatedStorage.MainEvent
+
+for _, code in ipairs(Codes) do
+    print(code)
+    remote:FireServer("EnterPromoCode", code)
+    wait(2)
+end
