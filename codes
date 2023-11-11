@@ -17,7 +17,7 @@ local Codes = {
 local remote = game.ReplicatedStorage.MainEvent
 
 for _, code in ipairs(Codes) do
-    print(Codes)
-    remote:FireServer("EnterPromoCode", Codes)
+    print(code)
+    remote:FireServer("EnterPromoCode", code)
     wait(2)
 end
