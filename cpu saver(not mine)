@@ -70,4 +70,4 @@ w.DescendantAdded:Connect(function(v)
         v[v.ClassName.."Template"]=0
     end
 end)
-game:GetService("RunService"):Set3dRenderingEnabled(false)
+
