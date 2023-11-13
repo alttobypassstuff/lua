@@ -17,6 +17,7 @@ if revolverBought then
         fireclickdetector(RevolverAmmoBuy.ClickDetector)
         a = a + 1
     until a == 130
+getgenv().spin = true
 end
 end
 end
