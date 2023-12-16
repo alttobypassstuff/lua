@@ -1,29 +1,13 @@
 local Codes = {
+    "SNOWMAN2023",
     "REINDEER2023",
     "CANDYCANE2023",
-    "SNOWMAN2023 ",
-    "CANDYCANE2023",
+    "SNOWMAN2023",
     "KART",
-    "MOTORCYCLE",
-    "MOPED",
-    "BIKE",
-    "PUMPKINS2023",
-    "CANDYCORN2023",
-    "MUMMY2023",
     "THANKSGIVING23",
     "HALLOWEEN2023",
-    "BIKE",
     "DAUP", 
-    "LABORDAY2023",
-    "MOTORCYCLE",
-    "DHT100K",
     "MELONBEAR",
-    "SCHOOL2023",
-    "DHSUPRISE!",
-    "#FREED",
-    "CAR",
-    "MOPED",
-    "STAYSOLIDROCKY"
 }
 
 local remote = game.ReplicatedStorage.MainEvent
