@@ -15,6 +15,7 @@ local Codes = {
 }
 
 
+
 local remote = game.ReplicatedStorage.MainEvent
 
 for _, code in ipairs(Codes) do
