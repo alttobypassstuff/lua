@@ -8,7 +8,12 @@ local Codes = {
     "HALLOWEEN2023",
     "DAUP", 
     "MELONBEAR",
+    "pumpkins2023",
+    "TRADEME!",
+    "XMAS2023",
+    "HOODMAS2023",
 }
+
 
 local remote = game.ReplicatedStorage.MainEvent
 
