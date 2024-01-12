@@ -1,4 +1,5 @@
-local a, item, itemAmmo, revolverBought, plr = 1, '[LMG] - $3863', '200 [LMG Ammo] - $309', false, game.Players.LocalPlayer
+local a, item, itemAmmo, revolverBought, plr = 1, '[LMG] - $39
+7', '200 [LMG Ammo] - $318', false, game.Players.LocalPlayer
 if (plr.Backpack:FindFirstChild(item) == nil) and (plr.Character:FindFirstChild(item) == nil) then
 repeat
         local RevolverBuy = workspace.Ignored.Shop[item]
