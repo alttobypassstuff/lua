@@ -3,7 +3,7 @@ if (plr.Backpack:FindFirstChild(getgenv().gun) == nil) and (plr.Character:FindFi
 repeat
         plr.Character.HumanoidRootPart.CFrame = getgenv().gun.Head.CFrame + Vector3.new(0, 3.2, 0)
         task.wait(0.2)
-        fireclickdetector(RevolverBuy.ClickDetector)
+        fireclickdetector(getgenv().gun.ClickDetector)
         ItemBought = true
 until ItemBought
 if ItemBought then
