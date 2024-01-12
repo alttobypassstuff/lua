@@ -1,18 +1,16 @@
-local a, item, itemAmmo, revolverBought, plr = 1, getgenv().gun, getgenv().AmmoName, false, game.Players.LocalPlayer
-if (plr.Backpack:FindFirstChild(item) == nil) and (plr.Character:FindFirstChild(item) == nil) then
+local a, ItemBought, plr = 1, false, game.Players.LocalPlayer
+if (plr.Backpack:FindFirstChild(getgenv().gun) == nil) and (plr.Character:FindFirstChild(getgenv().gun) == nil) then
 repeat
-        local RevolverBuy = workspace.Ignored.Shop[item]
-        plr.Character.HumanoidRootPart.CFrame = RevolverBuy.Head.CFrame + Vector3.new(0, 3.2, 0)
+        plr.Character.HumanoidRootPart.CFrame = getgenv().gun.Head.CFrame + Vector3.new(0, 3.2, 0)
         task.wait(0.2)
         fireclickdetector(RevolverBuy.ClickDetector)
-        revolverBought = true
-until revolverBought
-if revolverBought then
+        ItemBought = true
+until ItemBought
+if ItemBought then
     task.wait(1)
-    if (plr.Backpack:FindFirstChild(itemAmmo) == nil) and (plr.Character:FindFirstChild(itemAmmo) == nil) then 
+    if (plr.Backpack:FindFirstChild(getgenv().AmmoTobuy) == nil) and (plr.Character:FindFirstChild(getgenv().AmmoTobuy) == nil) then 
     repeat 
-        local RevolverAmmoBuy = workspace.Ignored.Shop[itemAmmo]
-        plr.Character.HumanoidRootPart.CFrame = RevolverAmmoBuy.Head.CFrame + Vector3.new(0, 3.2, 0)
+        plr.Character.HumanoidRootPart.CFrame = getgenv().AmmoTobuy.Head.CFrame + Vector3.new(0, 3.2, 0)
         task.wait(0.2)
         fireclickdetector(RevolverAmmoBuy.ClickDetector)
         a = a + 1
