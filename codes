@@ -10,7 +10,7 @@ local Codes = {
     "NEWYEAR2024",
 }
 
-local A = os.clock
+local A = os.clock()
 local currencyFolder = game:GetService("Players").LocalPlayer:WaitForChild("DataFolder"):WaitForChild("Currency")
 
 local initialMoney = currencyFolder.Value
