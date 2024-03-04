@@ -5,10 +5,7 @@ local Codes = {
     "DAUP", 
     "MELONBEAR",
     "pumpkins2023",
-    "TRADEME!",
-    "Valentine2024",
-    "NEWYEAR2024",
-    "0466-8224-2695",
+    "TRADEME!"
 }
 
 local A = os.clock()
