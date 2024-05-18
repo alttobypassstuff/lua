@@ -2268,7 +2268,7 @@ function library:AddWindow(text)
 	return sec
 end
 
-coroutine.yield(function()
+task.spawn(function()
     repeat
         task.wait()
     until getgenv().UIDD ~= nil
