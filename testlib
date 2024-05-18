@@ -660,7 +660,7 @@ UPPERLABEL.Size = UDim2.new(0, 84, 0, 23)
 UPPERLABEL.ZIndex = 3
 UPPERLABEL.Font = Enum.Font.SourceSansSemibold
 
-UPPERLABEL.Text = "not loaded"
+UPPERLABEL.Text = ("Welcome " .. game:GetService("Players").LocalPlayer.DisplayName .. ", UID: ".. UIDD)
 UPPERLABEL.TextColor3 = Color3.fromRGB(199, 199, 199)
 UPPERLABEL.TextSize = 17.000
 UPPERLABEL.TextXAlignment = Enum.TextXAlignment.Right
@@ -2271,9 +2271,10 @@ end
 coroutine.yield(function()
     repeat
         task.wait()
-    until DISCORDUSER ~= nil
-    UPPERLABEL.Text = DISCORDUSER
+    until UIDD ~= nil
+    UPPERLABEL.Text = UIDD
 end)
+
 
 draggable(MAIN)
 library.GUI = PCR_1 
