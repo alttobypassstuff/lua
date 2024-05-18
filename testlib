@@ -2272,7 +2272,7 @@ task.spawn(function()
     repeat
         task.wait()
     until getgenv().UIDD ~= nil
-    UPPERLABEL.Text = getgenv().UIDD
+    UPPERLABEL.Text = ("Welcome " .. (game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.DisplayName or "Guest") .. ", UID: ".. (getgenv().UIDD or "N/A"))
 end)
 
 
