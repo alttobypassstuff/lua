@@ -2267,7 +2267,19 @@ function library:AddWindow(text)
 
 	return sec
 end
-
+function library:Visible(bool)
+	MAIN.Visible = bool
+	BG.Visible = bool
+	Upper.Visible = bool
+	UIListLayout.Visible = bool
+	linedecoupper.Visible = bool
+	DOWNER.Visible = bool
+	WEBSITE.Visible = bool
+	LABEL2.Visible = bool
+	linedecoDOWNER.Visible = bool
+	UPPERLABEL.Visible = bool
+	limit1.Visible = bool
+end
 task.spawn(function()
     repeat
         task.wait()
