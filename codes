@@ -3,10 +3,15 @@ print("executed")
 local Codes = {
     "HALLOWEEN2023",
     "DAUP", 
-    "MELONBEAR",
     "pumpkins2023",
     "TRADEME!",
-    "JULY4TH2024"
+    "RUBY",
+    "BLAZE",
+    "PENGUIN",
+    "METAL",
+    "RACE",
+    "UNICORN",
+    "CAT",
 }
 
 local A = os.clock()
